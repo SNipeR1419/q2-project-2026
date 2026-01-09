@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>NFL Guessing Game</title>
+
+</head>
+<body>
+  <p2>Score: <span id="score">0</span></p2>
+
+  <hr>
+  <h1>What player did better by year ?</h1>
+   
+  <hr>
+  <p>Two random players will appear. Guess who did better based on the sentence.</p>
+  <hr>
+
+  <div id="players">
+    <img id="img1" class="player-img">
+    <img id="img2" class="player-img">
+  </div>
+  
+ >
+
+<hr>
+
+<button id="Button1" >Player 1 </button>
+
+<button id="Button2" >Player 2 </button>
+
+
+
+
+</body>
+</html>
+
+<script> 
+const quarterbacks = [
+  { name: "Tom Brady", team: "Patriots", year: 2017, record: 13 ,img:"tombrady.webp"},
+  { name: "Patrick Mahomes", team: "Chiefs", year: 2024, record: 11 ,img:"patrick.jpg" },
+  { name: "Aaron Rodgers", team: "Packers", year: 2016, record: 10 ,img:"arron.webp" },
+  { name: "Josh Allen", team: "Bills", year: 2018, record: 6    ,img:"josh.webp"  },
+  { name: "Lamar Jackson", team: "Ravens", year: 2020, record: 11, img:"lamar.jpg"  },
+  { name: "Joe Burrow", team: "Bengals", year: 2020, record: 4 ,img:"joe.webp"  },
+  { name: "Justin Herbert", team: "Chargers", year: 2020, record: 7 ,img:"justin.jpg"  },
+  { name: "Jalen Hurts", team: "Eagles", year: 2020, record: 4, img:"jalen.webp"  },
+  { name: "Dak Prescott", team: "Cowboys", year: 2023, record: 12 ,img:"dak.jpg"  },
+  { name: "Jimmy Garoppolo", team: "49ers", year: 2017, record: 6 ,img:"jimmy.webp"  },
+  { name: "Russell Wilson", team: "Seahawks", year: 2016, record: 10 , img:"russel.jpg" }
+];
+
+const runningBacks = [
+  { name: "Derrick Henry", team: "Titans", year: 2016, record: 9 ,img:"derrick.webp"  },
+  { name: "Christian McCaffrey", team: "49ers", year: 2022, record: 13,img:"christian.jpg"  },
+  { name: "Alvin Kamara ", team: "Saints", year: 2020, record: 12,img:"alvin.webp"  },
+  { name: "Dalvin Cook", team: "Vikings", year: 2019, record: 10 ,img:"dalvin.webp"  },
+  { name: "Jonathan Taylor", team: "Colts", year: 2021, record: 11 , img:"jonathan.avif"  },
+  { name: "Saquon Barkley", team: "Giants", year: 2018, record: 5 ,img:"saquon.jpg"  },
+  { name: "Nick Chubb", team: "Browns", year: 2018, record: 7  ,img:"nick.jpg"  },
+  { name: "Marshawn Lynch", team: "Seahawks", year: 2016, record: 10 ,img:"lynch.webp" }
+];
+
+const wideReceivers = [
+  { name: "Odell Beckham Jr.", team: "Giants", year: 2016, record: 11 ,img: "odell.webp"  },
+  { name: "Justin Jefferson", team: "Vikings", year: 2020, record: 7 ,img: "jj.webp"  },
+  { name: "Ja'Marr Chase", team: "Bengals", year: 2021, record: 10   ,img:"jamar.jpg"  },
+  { name: "Tyreek Hill", team: "Dolphins", year: 2022, record: 9      ,img:"tyreek.jpg"  },
+  { name: "Jaylen Waddle", team: "Dolphins", year: 2021, record: 9  ,img:"waddle.jpg"  },
+  { name: "Julio Jones", team: "Falcons", year: 2016, record: 11 ,img:"jones.jpg" },
+  { name: "DeAndre Hopkins", team: "Cardinals", year: 2020, record: 8  ,img:"deandre.jpg"  },
+  { name: "Davante Adams", team: "Packers", year: 2016, record: 10 ,img:"davante.webp"  }
+  
+];
+
+
+
+const imgs= [
+'tombrady.webp',
+'patrick.jpg',
+'jamar.jpg' ,
+'joe.webp',
+'christian.jpg',
+'dak.jpg',
+'patrick.jpg',
+'derrick.webp',
+'odell.webp',
+'justin.jpg',
+'tyreek.webp',
+'lamar.jpg',
+'josh.webp',
+'alvin.webp',
+'nick.jpg',
+'dalvin.jpg',
+'jalen.webp',
+'jimmy.webp',
+'saquon.jpg',
+'arron.webp',
+'jonathan.avif',
+'davante.webp',
+'jones.jpg',
+'dalvin.webp', 
+'deandre.jpg',
+'jj.webp',
+]
+
+
+let score = 0;
+
+// get elements
+const scoreSpan = document.getElementById("score"); // getting it from the html
+const button1 = document.getElementById("Button1");// getting it from the html
+const button2 = document.getElementById("Button2");// getting it from the html
+
+// function to increase score
+function increaseScore() {// increase score function
+  score++;// increase score by 1
+  scoreSpan.textContent = score; // update score display
+}
+
+// add event listeners to buttons
+button1.addEventListener("click", increaseScore);  // onclick button 1 will increase by  
+button2.addEventListener("click", increaseScore); // onclick button 2 will increase by  
+
+
+
+
+
+  </script>
+
+  
